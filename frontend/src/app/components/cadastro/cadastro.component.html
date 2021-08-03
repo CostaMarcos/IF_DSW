@@ -1,0 +1,44 @@
+<div class="content">
+  <h1><strong>Cadastro</strong></h1>
+  <div class="w-25 p-2 form">
+    <form [formGroup]="formulario" (ngSubmit)="cadastrar()">
+        <input
+          formControlName="nome"
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Nome completo"
+          [class.erro]="validarCampo('nome')"
+          >
+
+        <input
+          formControlName="usuario"
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Usuário"
+          [class.erro]="validarCampo('usuario')"
+        >
+
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="email@examplo.com"
+          [class.erro]="validarCampo('email')"
+        >
+
+        <input
+          formControlName="senha"
+          type="password"
+          class="form-control"
+          id="inputPassword"
+          placeholder="senha"
+          [class.erro]="validarCampo('senha')"
+        >
+
+        <button type="submit" class="btn btn-cadastro">Cadastrar</button>
+    </form>
+  </div>
+</div>
