@@ -52,4 +52,8 @@ export class CadastroComponent implements OnInit {
 
     return false
   }
+
+  cancelar(){
+    this.route.navigateByUrl('');
+  }
 }

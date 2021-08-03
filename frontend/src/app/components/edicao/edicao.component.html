@@ -1,7 +1,7 @@
 <div class="content">
-  <h1><strong>Cadastro</strong></h1>
+  <h1><strong>Editar</strong></h1>
   <div class="w-25 p-2 form">
-    <form [formGroup]="formulario" (ngSubmit)="cadastrar()">
+    <form [formGroup]="formulario" (ngSubmit)="editar()">
         <input
           formControlName="nome"
           type="text"
@@ -40,7 +40,7 @@
 
         <div class="buttons">
           <button type="button" class="btn btn-danger m-4" (click)="cancelar()">Cancelar</button>
-          <button type="submit" class="btn btn-cadastro">Cadastrar</button>
+          <button type="submit" class="btn btn-cadastro">Confirmar</button>
         </div>
     </form>
   </div>

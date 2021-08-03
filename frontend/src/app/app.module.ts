@@ -9,11 +9,25 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ListagemComponent } from './components/listagem/listagem.component';
+import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
+import { HomeComponent } from './components/home/home.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { EdicaoComponent } from './components/edicao/edicao.component';
+import { DeletarDialogComponent } from './components/deletar-dialog/deletar-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
+    ListagemComponent,
+    CabecalhoComponent,
+    HomeComponent,
+    EdicaoComponent,
+    DeletarDialogComponent,
   ],
   imports: [
     HttpClientModule,
@@ -23,7 +37,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    MatMenuModule,
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,34 @@
+<div class="content">
+    <div class="tabela mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource"
+             matSort matSortActive="created" matSortDisableClear matSortDirection="desc">
+
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef>Nome</th>
+          <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="opcoes">
+          <th mat-header-cell *matHeaderCellDef width="5%" class="mat-table-with-check">Opções</th>
+          <td mat-cell *matCellDef="let element" width="5%" (click)="$event.stopPropagation()"  class="mat-table-with-check ">
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="btn button-more-rith-td">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="editar(element)">
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item (click)="deletar(element.id)">
+                <span>Deletar</span>
+              </button>
+            </mat-menu>
+          </td>
+          <td mat-footer-cell *matFooterCellDef  width="5%"></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+</div>
